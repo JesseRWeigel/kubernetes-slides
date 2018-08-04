@@ -77,11 +77,33 @@ export default class Presentation extends React.Component {
             What is Kubernetes
           </Heading>
           <List>
-            <ListItem>Built by Google</ListItem>
+            <ListItem>Built by Google and Open Source</ListItem>
             <ListItem>
               Groups containers that make up an application into logical units
               for easy management and discovery
             </ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]}>
+          <Heading size={3} textColor="secondary">
+            Kubernetes Features
+          </Heading>
+          <List>
+            <ListItem>Automatic binpacking</ListItem>
+            <ListItem>Self-healing</ListItem>
+            <ListItem>Horizontal scaling</ListItem>
+            <ListItem>Service discovery and load balancing</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]}>
+          <Heading size={3} textColor="secondary">
+            Kubernetes Features
+          </Heading>
+          <List>
+            <ListItem>Automated rollouts and rollbacks</ListItem>
+            <ListItem>Secret and configuration management</ListItem>
+            <ListItem>Storage orchestration</ListItem>
+            <ListItem>Batch execution</ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]}>
@@ -115,6 +137,11 @@ export default class Presentation extends React.Component {
             <ListItem>Google Container Engine (GKE)</ListItem>
           </List>
         </Slide>
+        {/* <Slide transition={["fade"]}>
+          <Heading size={3} textColor="secondary">
+            Kubernetes Terminology
+          </Heading>
+        </Slide> */}
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="secondary" caps>
             Resources
