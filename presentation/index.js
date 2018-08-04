@@ -1,12 +1,16 @@
 // Import React
 import React from "react";
 // Import Spectacle Core tags
-import { CodePane, Deck, Heading, List, ListItem, Slide, Text } from "spectacle";
+import { CodePane, Deck, Heading, Image, List, ListItem, Slide, Text, BlockQuote, Cite, Quote } from "spectacle";
 // Import theme
 import { theme } from "spectacle-theme-solarized-dark";
 
 // Require CSS
 require("normalize.css");
+
+const images = {
+  def: require('../assets/kubernetes-def.png'),
+};
 
 export default class Presentation extends React.Component {
   render() {
@@ -17,23 +21,12 @@ export default class Presentation extends React.Component {
         theme={theme}
       >
         <Slide transition={["zoom"]}>
-          <Heading size={3} caps lineHeight={1} textColor="secondary">
-            Easy React Content Management with GraphQL and WordPress
+          <Heading size={2} caps lineHeight={1} textColor="secondary">
+            Intro to Kubernetes
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={5}>
             Twitter: @JesseRWeigel
-            <a
-              style={{
-                textDecoration: "none",
-                display: "block",
-                color: "rgb(253, 133, 61)",
-                margin: "4px auto"
-              }}
-              href="https://react-wp-graphql-demo-xspkubwskj.now.sh/"
-            >
-              Demo Site
-            </a>
-            <a
+            {/* <a
               href="http://materialistic-earthquake.surge.sh/"
               style={{
                 textDecoration: "none",
@@ -43,28 +36,31 @@ export default class Presentation extends React.Component {
               }}
             >
               Slides: materialistic-earthquake.surge.sh
-            </a>
-            <a
-              href="https://github.com/JesseRWeigel/react-wp-graphql-demo"
-              style={{
-                textDecoration: "none",
-                display: "block",
-                color: "rgb(253, 133, 61)",
-                margin: "4px auto"
-              }}
-            >
-              GitHub Repo
-            </a>
+            </a> */}
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={2} textColor="secondary" caps>
-            Prerequisites
+          <Heading size={3} textColor="secondary" caps>
+            What is Kubernetes
           </Heading>
-          <List>
-            <ListItem>Node and NPM</ListItem>
-            <ListItem>React with NextJS</ListItem>
-            <ListItem>WordPress</ListItem>
+          <Image src={images.def} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={3} textColor="secondary" caps>
+            What is Kubernetes
+          </Heading>
+          <BlockQuote>
+            <Quote textColor="tertiary" style={{fontSize: '30px', lineHeight: 1.25}}>An open-source system for automating deployment, scaling, and management of containerized applications.</Quote>
+            <Cite>kubernetes.io</Cite>
+          </BlockQuote>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={3} textColor="secondary" caps>
+            What is Kubernetes
+          </Heading>
+           <List>
+            <ListItem>Built by Google</ListItem>
+            <ListItem>Groups containers that make up an application into logical units for easy management and discovery</ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]}>
