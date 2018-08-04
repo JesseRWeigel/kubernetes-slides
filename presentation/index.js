@@ -1,7 +1,19 @@
 // Import React
 import React from "react";
 // Import Spectacle Core tags
-import { CodePane, Deck, Heading, Image, List, ListItem, Slide, Text, BlockQuote, Cite, Quote } from "spectacle";
+import {
+  BlockQuote,
+  Cite,
+  Deck,
+  Heading,
+  Image,
+  Link,
+  List,
+  ListItem,
+  Quote,
+  Slide,
+  Text
+} from "spectacle";
 // Import theme
 import { theme } from "spectacle-theme-solarized-dark";
 
@@ -9,7 +21,7 @@ import { theme } from "spectacle-theme-solarized-dark";
 require("normalize.css");
 
 const images = {
-  def: require('../assets/kubernetes-def.png'),
+  def: require("../assets/kubernetes-def.png")
 };
 
 export default class Presentation extends React.Component {
@@ -50,7 +62,13 @@ export default class Presentation extends React.Component {
             What is Kubernetes
           </Heading>
           <BlockQuote>
-            <Quote textColor="tertiary" style={{fontSize: '30px', lineHeight: 1.25}}>An open-source system for automating deployment, scaling, and management of containerized applications.</Quote>
+            <Quote
+              textColor="tertiary"
+              style={{ fontSize: "30px", lineHeight: 1.25 }}
+            >
+              An open-source system for automating deployment, scaling, and
+              management of containerized applications.
+            </Quote>
             <Cite>kubernetes.io</Cite>
           </BlockQuote>
         </Slide>
@@ -58,74 +76,58 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="secondary" caps>
             What is Kubernetes
           </Heading>
-           <List>
+          <List>
             <ListItem>Built by Google</ListItem>
-            <ListItem>Groups containers that make up an application into logical units for easy management and discovery</ListItem>
+            <ListItem>
+              Groups containers that make up an application into logical units
+              for easy management and discovery
+            </ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]}>
           <Heading size={3} textColor="secondary">
-            Install WPGraphQL
+            Why Use Kubernetes
+          </Heading>
+          <List>
+            <ListItem>Simplified application deployment</ListItem>
+            <ListItem>Better use of machine resources</ListItem>
+            <ListItem>Lower Costs</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]}>
+          <Heading size={3} textColor="secondary">
+            Why Use Kubernetes
           </Heading>
           <Text size={6} textColor="tertiary">
-            Download the zip from the wp-graphql GitHub repo and upload to
-            WordPress. Once activated, flush the permalinks.
+            When a instance goes down, Kubernetes will automatically restart
+            and/or start a new instance, and handle any networking issues for
+            the new instance.
           </Text>
         </Slide>
         <Slide transition={["fade"]}>
           <Heading size={2} textColor="secondary">
-            Setup Apollo
+            Getting Started
           </Heading>
-          <Text size={6} textColor="tertiary">
-            The easiest way to do this is to use a boilerplate. Try to use the
-            most up to date one you can find, because things change pretty
-            quickly with NextJS and Apollo.
-          </Text>
-        </Slide>
-        <Slide transition={["fade"]}>
-          <Heading size={2} textColor="secondary">
-            GraphQL Queries
-          </Heading>
-          <CodePane
-            lang="javascript"
-            source={require("raw-loader!../assets/query.example")}
-            theme="dark"
-            margin="20px auto"
-            style={{ fontSize: "18px" }}
-          />
-        </Slide>
-        <Slide transition={["fade"]}>
-          <Heading size={2} textColor="secondary">
-            Query Component
-          </Heading>
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/queryComp.example")}
-            theme="dark"
-            margin="20px auto"
-            style={{ fontSize: "18px" }}
-          />
-        </Slide>
-        <Slide transition={["fade"]}>
-          <Heading size={2} textColor="secondary">
-            Deployment
-          </Heading>
-          <CodePane
-            lang="javascript"
-            source={require("raw-loader!../assets/now.example")}
-            theme="dark"
-            margin="20px auto"
-            style={{ fontSize: "18px" }}
-          />
+          <List>
+            <ListItem>Learn Docker</ListItem>
+            <ListItem>In browser Kubernetes Tutorials</ListItem>
+            <ListItem>Locally with Minikube</ListItem>
+            <ListItem>Google Container Engine (GKE)</ListItem>
+          </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="secondary" caps>
-            Take it Further
+            Resources
           </Heading>
           <List>
-            <ListItem>Custom Post Types</ListItem>
-            <ListItem>Cloud Database and Storage</ListItem>
-            <ListItem>Custom Routing</ListItem>
+            <ListItem>
+              <Link href="https://kubernetes.io/docs/">
+                https://kubernetes.io/docs/
+              </Link>
+            </ListItem>
+            <ListItem>
+              Kubernetes: Up and Running, Kelsey Hightower (Book)
+            </ListItem>
           </List>
         </Slide>
       </Deck>
