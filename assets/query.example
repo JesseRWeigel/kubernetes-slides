@@ -1,0 +1,15 @@
+const PostsQuery = gql`
+      {
+        posts {
+          edges {
+            node {
+              id
+              slug
+              title
+              date
+              content
+            }
+          }
+        }
+      }
+    `
